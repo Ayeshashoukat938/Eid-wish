@@ -13,28 +13,33 @@ body{
     justify-content:center;
     align-items:center;
     height:100vh;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    background:linear-gradient(135deg,#fff1eb,#ace0f9,#fbc2eb);
     font-family:Arial, sans-serif;
     overflow:hidden;
 }
 
 .container{
+    background:rgba(255,255,255,0.35);
+    backdrop-filter:blur(10px);
+    padding:50px;
+    border-radius:30px;
     text-align:center;
-    color:white;
+    width:80%;
+    max-width:700px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.15);
     animation:fadeIn 2s ease;
 }
 
 h1{
     font-size:55px;
-    color:#ffd700;
-    text-shadow:0 0 20px #ffd700;
-    animation:glow 2s infinite alternate;
+    color:#ff4d6d;
+    text-shadow:0 0 15px rgba(255,77,109,0.4);
+    margin-bottom:20px;
 }
 
 p{
     font-size:22px;
-    width:80%;
-    margin:auto;
+    color:#444;
     line-height:1.8;
 }
 
@@ -44,26 +49,27 @@ button{
     font-size:20px;
     border:none;
     border-radius:50px;
-    background:#ffd700;
-    color:black;
+    background:linear-gradient(45deg,#ff758c,#ff7eb3);
+    color:white;
     cursor:pointer;
     transition:0.4s;
     font-weight:bold;
+    box-shadow:0 5px 15px rgba(255,118,136,0.4);
 }
 
 button:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 20px #ffd700;
-}
-
-@keyframes glow{
-    from{ text-shadow:0 0 10px #ffd700; }
-    to{ text-shadow:0 0 30px #fff700; }
+    transform:scale(1.08);
 }
 
 @keyframes fadeIn{
-    from{opacity:0; transform:translateY(30px);}
-    to{opacity:1; transform:translateY(0);}
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 </style>
 </head>
@@ -74,16 +80,16 @@ button:hover{
     <h1>🌙 Eid-ul-Adha Mubarak 🐐</h1>
 
     <p>
-        May Allah fill your life with happiness, peace, and countless blessings.
-        Enjoy this beautiful Eid with your family and loved ones. ✨
+        May this Eid bring happiness, success, peace, endless blessings And Barakah
+        into your life. Enjoy every beautiful moment with your loved ones ✨
     </p>
 
-    <button onclick="showWish()">Click for Surprise 🎁</button>
+    <button onclick="showWish()">Open Wish 🎁</button>
 </div>
 
 <script>
 function showWish(){
-    alert("✨ Wishing You & Your Family a Very Happy Bakra Eid ✨");
+    alert("✨ Wishing You & Your Family a Wonderful Bakra Eid ✨");
 }
 </script>
 
