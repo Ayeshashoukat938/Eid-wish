@@ -6,6 +6,7 @@
 <title>Eid Mubarak</title>
 
 <style>
+
 body{
     margin:0;
     padding:0;
@@ -17,6 +18,8 @@ body{
     font-family:Arial, sans-serif;
     overflow:hidden;
 }
+
+/* main card */
 
 .container{
     background:rgba(255,255,255,0.35);
@@ -61,6 +64,65 @@ button:hover{
     transform:scale(1.08);
 }
 
+/* custom popup */
+
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.35);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.popup-box{
+    width:80%;
+    max-width:350px;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    animation:pop 0.4s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.popup-box h2{
+    color:#ff4d6d;
+    margin-bottom:15px;
+}
+
+.popup-box p{
+    color:#444;
+    line-height:1.7;
+    font-size:18px;
+}
+
+.popup-box button{
+    margin-top:20px;
+    padding:10px 25px;
+    border:none;
+    border-radius:25px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(0.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
 @keyframes fadeIn{
     from{
         opacity:0;
@@ -71,12 +133,14 @@ button:hover{
         transform:translateY(0);
     }
 }
+
 </style>
 </head>
 
 <body>
 
 <div class="container">
+
     <h1>🌙 Eid-ul-Adha Mubarak 🐐</h1>
 
     <p>
@@ -85,12 +149,37 @@ button:hover{
     </p>
 
     <button onclick="showWish()">Open Wish 🎁</button>
+
+</div>
+
+<!-- popup -->
+
+<div id="popup" class="popup">
+
+    <div class="popup-box">
+
+        <h2>✨ Eid Mubarak ✨</h2>
+
+        <p>
+            Wishing You & Your Family a Wonderful Eid-ul-Adha 🌙
+        </p>
+
+        <button onclick="closePopup()">Close</button>
+
+    </div>
+
 </div>
 
 <script>
+
 function showWish(){
-    alert("✨ Wishing You & Your Family a Wonderful Bakra Eid ✨");
+    document.getElementById("popup").style.display = "flex";
 }
+
+function closePopup(){
+    document.getElementById("popup").style.display = "none";
+}
+
 </script>
 
 </body>
